@@ -1,4 +1,8 @@
 #box {
-  background-color: blue;
+  background-color: red;
   height: 100px
+}
+
+.msg {
+  color: blue
 }

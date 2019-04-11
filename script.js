@@ -3,3 +3,7 @@ $('form').on('submit', function(e) {
 	console.log($('#anymessage').val());
   $('#box').append($('#anymessage').val() + '<br>');
 });
+
+a = ['Pe']
+
+console.log(a[0])
