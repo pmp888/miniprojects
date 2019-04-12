@@ -10,7 +10,6 @@
 
 
 // extract the content of the input
-
 $('#messageinput').on('keyup',function(e) {
   console.log($(this).val())
   var msg = $(this).val()
@@ -20,5 +19,34 @@ $('#messageinput').on('keyup',function(e) {
     $('#box').append('<div class="msg">' + msg + '</div>')
     // clear input
     $('#messageinput').val('')
-  };
+  }
+});
+// $('#box').detach().on($('button.hover')); - WRONG
+// target element inside the box (each message) + click
+// $(#on(click).$(this).detach tony said comment..
+$(document).on('click', '.msg', function() {
+  $(this).detach() // detach that getElementById
 })
+// Behind the scenes
+// let on = function(action_type, element, c) {
+//   if (action_type == 'click') {
+//     // do this
+//     // on which element?
+//     element
+//   }
+// }
+//
+// 1. Channels
+//
+// Create a box with a list of channels
+// When you click on a channel, the content of another box called "messages" should change
+// Change the background color of the selected channel
+
+// Mini Project 2.1
+
+$('#channels li').on('click', function() {
+  $('#channels li').css('background-color','white')
+  $(this).css('background-color','blue')
+})
+
+// function() {}
