@@ -43,8 +43,10 @@ $(document).on('click', '.msg', function() {
 // Change the background color of the selected channel
 
 // Mini Project 2.1
-
+var channels = ['DOTA2','League of Legends','Heroes of the Storm','DOTA Chess']
 $('#channels li').on('click', function() {
+for (games in channels) {$('#channels li').html(channels[games])
+}
   $('#channels li').css('background-color','white')
   $(this).css('background-color','blue')
   // $('#messages h1').html('Hello')
