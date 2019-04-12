@@ -47,6 +47,11 @@ $(document).on('click', '.msg', function() {
 $('#channels li').on('click', function() {
   $('#channels li').css('background-color','white')
   $(this).css('background-color','blue')
+  // $('#messages h1').html('Hello')
+// if ($(this).html() == 'Welcome') { no need to show as im showing name of channel
+  $('#messages h1').html($(this).html())
+
+  console.log($(this));
 })
 
 // function() {}
